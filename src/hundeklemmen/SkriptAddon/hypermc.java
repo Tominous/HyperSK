@@ -50,7 +50,7 @@ public class hypermc extends JavaPlugin implements Listener {
         Skript.registerEffect(SendPlayerToServer.class, "hypermc send %player% to [server] %string%");
 
         Skript.registerEvent("hypermc purchase", SimpleEvent.class, new Class[]{bungeecordMessageReceiveEvent.class}, "hypermc purchase");
-       //Skript.registerEvent("Leash Entity", SimpleEvent.class, PlayerLeashEntityEvent.class, new String[]{"[player ]leash"});
+       Skript.registerEvent("Leash Entity", SimpleEvent.class, PlayerLeashEntityEvent.class, new String[]{"[player ]leash"});
         registerEventValue(bungeecordMessageReceiveEvent.class, Player.class, new Getter<Player, bungeecordMessageReceiveEvent>() {
             @Override
             public Player get(bungeecordMessageReceiveEvent event) {
